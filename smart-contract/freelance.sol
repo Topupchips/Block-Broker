@@ -14,6 +14,7 @@ contract FreelancerMarket {
         address freelancer;
         string title;
         string description;
+        string proof;
         uint budget;
         JobStatus status;
         bool verifiedByClient;
@@ -31,9 +32,9 @@ contract FreelancerMarket {
     mapping(address => FreelancerProfile) public freelancers;
     mapping(uint => Job) public jobs;
 
-    event JobPosted(uint indexed jobId, address indexed client, string title);
+    event JobPosted(uint indexed jobId, address indexed client, string title, uint budget);
     event JobAssigned(uint indexed jobId, address indexed freelancer);
-    event JobCompleted(uint indexed jobId);
+    event JobCompleted(uint indexed jobId, string proof);
     event JobVerifiedByClient(uint indexed jobId);
     event FreelancerProfileCreated(address indexed freelancerAddress, string name, string skills);
 
@@ -75,7 +76,9 @@ contract FreelancerMarket {
         emit FreelancerProfileCreated(msg.sender, name, skills);
     }
 
-    function postJob(string memory title, string memory description, uint budget) external {
+    function postJob(string memory title, string memory description, uint budget) external payable {
+        require(msg.value == budget, "Incorrect budget amount");
+
         jobIdCounter++;
         jobs[jobIdCounter] = Job({
             jobId: jobIdCounter,
@@ -83,12 +86,13 @@ contract FreelancerMarket {
             freelancer: address(0),
             title: title,
             description: description,
+            proof: '',
             budget: budget,
             status: JobStatus.Open,
             verifiedByClient: false
         });
 
-        emit JobPosted(jobIdCounter, msg.sender, title);
+        emit JobPosted(jobIdCounter, msg.sender, title, budget);
     }
 
     function assignJob(uint jobId, address freelancer) external onlyClient(jobId) jobExists(jobId) {
@@ -100,18 +104,21 @@ contract FreelancerMarket {
         emit JobAssigned(jobId, msg.sender);
     }
 
-    function completeJob(uint jobId) external onlyFreelancer(jobId) jobExists(jobId) {
+    function completeJob(uint jobId, string memory proof) external onlyFreelancer(jobId) jobExists(jobId) {
         require(jobs[jobId].status == JobStatus.InProgress, "Job not in progress");
 
         jobs[jobId].status = JobStatus.Completed;
+        jobs[jobId].proof = proof;
 
-        emit JobCompleted(jobId);
+        emit JobCompleted(jobId, proof);
     }
 
     function verifyJob(uint jobId) external onlyClient(jobId) jobExists(jobId) {
         require(jobs[jobId].status == JobStatus.Completed, "Job not completed yet");
         require(!jobs[jobId].verifiedByClient, "Job already verified");
 
+        // Transfer funds from client to freelancer
+        payable(jobs[jobId].freelancer).transfer(jobs[jobId].budget);
         // Update freelancer profile
         freelancers[jobs[jobId].freelancer].totalJobsCompleted++;
         freelancers[jobs[jobId].freelancer].totalEarned += jobs[jobId].budget;
