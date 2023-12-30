@@ -25,7 +25,15 @@ function Home() {
 }
 
 function HomeCTA(){
-  
+  return (
+    <div className='HomeCTA'>
+      <div className="bannerCtaTextWrapper">
+        <h2>Lorem Ipsum Dolor Amet Aenean blandit, massa a viverra!</h2>
+        <button>Get Started</button>
+      </div>
+    </div>
+  );
+
 }
 
 function HomeAbout(){
