@@ -1,0 +1,13 @@
+.ContractsWrapper{
+    height: fit-content;
+    padding: 60px;
+    background: rgb(201,249,232);
+    background: linear-gradient(6deg, rgb(219, 249, 239) 0%, rgb(220, 229, 237) 19%, rgb(229, 222, 231) 39%, rgb(252, 234, 225) 56%, rgba(255,255,255,1) 100%);
+}
+
+.AvailableContractContainer{
+    background-color: white;
+    padding: 40px;
+    margin-bottom: 40px;
+    border-radius: 20px;
+}
