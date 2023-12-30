@@ -1,9 +1,13 @@
 //Section Imports
 import Header from '../sections/Header.jsx';
 import TitledImage from '../sections/TitledImage.jsx';
+import Card from "../sections/Card.jsx";
+
+//Image Imports
 import contractIcon from "../assets/contracticon.png";
 import stockIcon from "../assets/stockicon.png";
 import talkingIcon from "../assets/talkingicon.png";
+import aboutImage from "../assets/aboutimage.jpeg";
 
 function Home() {
 
@@ -11,9 +15,24 @@ function Home() {
       <>
         <Header/>
         <HomeBanner/>
-        <HomeWhy/>
+        <div className="homeCombinedBackground">
+          <HomeWhy/>
+          <HomeAbout/>
+        </div>
       </>
     );
+}
+
+function HomeAbout(){
+
+  let aboutHeading = "Our Mission";
+  let aboutParagraph = "Donec eu porta turpis. Aenean blandit, massa a viverra dictum, purus erat aliquet turpis, quis eleifend purus nunc ac erat. Nam pharetra turpis sit amet lacinia aliquet. Vestibulum at placerat odio. Sed ex nisi, semper eget metus non, dapibus feugiat est. Integer nec condimentum elit. Mauris lobortis, nisl eget euismod porta, ex velit faucibus lacus, ut lobortis turpis lectus id risus. Praesent laoreet a velit sed elementum. ";
+
+  return (
+    <div className="HomeAbout">
+      <Card imgUrl={aboutImage} imgAlt="image of blocks" heading={aboutHeading} paragraph={aboutParagraph}/>
+    </div>
+  );
 }
   
 function HomeWhy(){
@@ -47,21 +66,21 @@ function HomeWhy(){
   );
 }
   
-  function HomeBanner(){
+function HomeBanner(){
 
-    return (
-      <div className="HomeBanner">
-        <div className='HomeBannerCTA'>
-          <h1 className='HomeBannerText'>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-          </h1>
-          <button className='HomeBannerButton'>
-            Get Started
-          </button>
-        </div>
+  return (
+    <div className="HomeBanner">
+      <div className='HomeBannerCTA'>
+        <h1 className='HomeBannerText'>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        </h1>
+        <button className='HomeBannerButton'>
+          Get Started
+        </button>
       </div>
-    );
-  }
+    </div>
+  );
+}
   
   
   

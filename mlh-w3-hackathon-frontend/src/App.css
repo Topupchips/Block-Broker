@@ -15,6 +15,9 @@ h2{
 h3{
   font-size: 1.5rem;
 }
+p{
+  font-size: 1.2rem;
+}
 
 button{
   font-weight: 500;
@@ -95,6 +98,13 @@ body{
   border: none;
   font-size: 1.5rem;
 }
+/* Combined background for Home Why and About*/
+.homeCombinedBackground{
+  background: rgb(201,249,232);
+background: linear-gradient(6deg, rgb(219, 249, 239) 0%, rgb(220, 229, 237) 19%, rgb(229, 222, 231) 39%, rgb(252, 234, 225) 56%, rgba(255,255,255,1) 100%);
+}
+
+/* Home Why */
 .HomeWhy{
   padding: 40px 0;
 }
@@ -137,5 +147,30 @@ p.titledImageDescription{
   font-size: 1.2rem;
   padding: 0 15px;
 }
+
+/* Home About */
+.card{
+  padding: 7%;
+  display: flex;
+  align-items: center;
+  gap: 7%;
+}
+.cardImageContainer{
+  flex-basis: 40%;
+  border-radius: 1000px;
+  
+}
+.cardImageContainer img{
+  width: 100%;
+  overflow: hidden;
+  border-radius: 20px;
+  
+}
+.cardTextContainer{
+  flex-basis: 60%;
+  text-align: left;
+}
+
+
 
 /* End Home */
