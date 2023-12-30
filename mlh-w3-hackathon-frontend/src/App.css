@@ -47,7 +47,7 @@ body{
   justify-content: space-between;
   align-items: center;
   padding: 20px 40px;
-  background-color: var(--text-window-white);
+  background-color: white;
   box-shadow: inset 0px 0px 15px 0px #dddddd;
   box-sizing: border-box;
 
