@@ -187,6 +187,7 @@ p.titledImageDescription{
   justify-content: center;
   align-items: center;
   text-align: center;
+  background-size: cover;
 }
 .bannerCtaTextWrapper{
   padding: 40px;
