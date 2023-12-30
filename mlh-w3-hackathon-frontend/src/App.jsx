@@ -10,6 +10,14 @@ function App() {
     <>
       <Header/>
       <HomeBanner/>
+      <HomeWhy/>
+    </>
+  );
+}
+
+function HomeWhy(){
+  return (
+    <>
     </>
   );
 }
