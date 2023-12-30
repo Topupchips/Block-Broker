@@ -2,37 +2,13 @@ import { useState } from 'react'
 import './App.css'
 
 //Page imports
-import Header from './sections/Header.jsx';
+import Home from './pages/Home.jsx';
 
 function App() {
 
   return (
-    <>
-      <Header/>
-      <HomeBanner/>
-      <HomeWhy/>
-    </>
-  );
-}
-
-function HomeWhy(){
-  return (
-    <>
-    </>
-  );
-}
-
-function HomeBanner(){
-  return (
-    <div className="HomeBanner">
-      <div className='HomeBannerCTA'>
-        <h1 className='HomeBannerText'>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-        </h1>
-        <button className='HomeBannerButton'>
-          Get Started
-        </button>
-      </div>
+    <div className="App">
+      <Home/>
     </div>
   );
 }
