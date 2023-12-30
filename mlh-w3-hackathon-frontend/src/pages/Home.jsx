@@ -1,3 +1,5 @@
+import "./Home.css";
+
 //Section Imports
 import Header from '../sections/Header.jsx';
 import TitledImage from '../sections/TitledImage.jsx';

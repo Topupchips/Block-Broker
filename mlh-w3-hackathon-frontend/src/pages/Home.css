@@ -1,0 +1,138 @@
+/* Home */
+/* Home Banner */
+.HomeBanner{
+    height: 600px;
+    max-height: 600px;
+    width: 100vw;
+    background-color: #f1f1f1;
+    background: url("../assets/aeee5775-208f-43da-a5e2-cf109c564c8a.jpeg");
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    background-size: cover;
+    
+  }
+  
+  .HomeBannerCTA{
+    width: 50%;
+    right: 0;
+    /* min-height: 40vh; */
+    padding: 60px;
+    margin: 40px;
+    background-color: rgba(255, 255, 255, .9);
+    position: relative;
+    border-radius: 2rem;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    box-sizing: border-box;
+  }
+  .HomeBannerButton{
+    margin-top: 1.5rem;
+    background-color: #9ee9ec; /*#50dae2, #fcadae*/
+  }
+  /* Combined background for Home Why and About*/
+  .homeCombinedBackground{
+    background: rgb(201,249,232);
+  background: linear-gradient(6deg, rgb(219, 249, 239) 0%, rgb(220, 229, 237) 19%, rgb(229, 222, 231) 39%, rgb(252, 234, 225) 56%, rgba(255,255,255,1) 100%);
+  }
+  
+  /* Home Why */
+  .HomeWhy{
+    padding: 40px 0;
+  }
+  
+  .foldoutContainer{
+    max-width: 100%;
+    display: flex;
+    padding: 0 4%;
+  }
+  
+  .foldoutContainer > *{
+    width: 100%;
+  }
+  .foldoutImageContainer{
+    max-width: 200px;
+    box-sizing: border-box;
+    margin: auto;
+    text-align: center;
+  }
+  
+  .foldoutImageContainer img{
+    max-width: 100%;
+    width: auto;
+    height: 150px;
+    text-align: center;
+  }
+  
+  .foldoutImageTitle h3{
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+  
+  h2.whyHeading{
+    text-align: center;
+    padding-bottom: 40px;
+  }
+  p.titledImageDescription{
+    text-align: center;
+    font-weight: 500;
+    font-size: 1.2rem;
+    padding: 0 15px;
+  }
+  
+  /* Home About */
+  .card{
+    padding: 7%;
+    display: flex;
+    align-items: center;
+    gap: 7%;
+  }
+  .cardImageContainer{
+    flex-basis: 40%;
+    border-radius: 1000px;
+    
+  }
+  .cardImageContainer img{
+    width: 100%;
+    overflow: hidden;
+    border-radius: 20px;
+    
+  }
+  .cardTextContainer{
+    flex-basis: 60%;
+    text-align: left;
+  }
+  
+  /* Home CTA */
+  
+  .HomeCTA{
+    min-height: 600px;
+    height: 600px;
+    background: url("../assets/6476953c-8b4f-4b83-979a-05ed241d269c.jpeg");
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-size: cover;
+  }
+  .bannerCtaTextWrapper{
+    min-height: 50%;
+    padding: 40px;
+    border-radius: 20px;
+    background-color: var(--text-window-white);
+    width: 50%;
+    height: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .bannerCtaTextWrapper button{
+    margin-top: 1.5rem;
+    background-color: 
+    #ba4f5d;
+    color: white;
+  }
+  /* End Home */
