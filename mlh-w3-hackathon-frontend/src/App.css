@@ -102,6 +102,7 @@ body{
   box-sizing: border-box;
 }
 .HomeBannerButton{
+  margin-top: 1.5rem;
   background-color: #9ee9ec; /*#50dae2, #fcadae*/
 }
 /* Combined background for Home Why and About*/
@@ -190,6 +191,7 @@ p.titledImageDescription{
   background-size: cover;
 }
 .bannerCtaTextWrapper{
+  min-height: 50%;
   padding: 40px;
   border-radius: 20px;
   background-color: var(--text-window-white);
@@ -202,6 +204,7 @@ p.titledImageDescription{
 }
 
 .bannerCtaTextWrapper button{
+  margin-top: 1.5rem;
   background-color: 
   #ba4f5d;
   color: white;
