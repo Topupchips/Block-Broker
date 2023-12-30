@@ -1,0 +1,23 @@
+/* Card CSS */
+
+.card{
+    padding: 7%;
+    display: flex;
+    align-items: center;
+    gap: 7%;
+  }
+  .cardImageContainer{
+    flex-basis: 40%;
+    border-radius: 1000px;
+    
+  }
+  .cardImageContainer img{
+    width: 100%;
+    overflow: hidden;
+    border-radius: 20px;
+    
+  }
+  .cardTextContainer{
+    flex-basis: 60%;
+    text-align: left;
+  }

@@ -1,0 +1,41 @@
+:root{
+  --text-charcoal: 
+  #58585a;
+  --text-window-white: rgba(255, 255, 255, .9);
+}
+h1, h2, h3, p, a, button, p{
+  font-family: 'Montserrat', sans-serif;
+  color: var(--text-charcoal);
+}
+/* Headings */
+h1{
+  line-height: 3.5rem;
+  font-size: 2.5rem;
+  font-weight: 500;
+}
+h2{
+  font-size: 2rem;
+  font-weight: 500;
+}
+h3{
+  font-size: 1.5rem;
+}
+p{
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+button{
+  font-weight: 500;
+  max-width: 300px;
+  padding: 15px;
+  border-radius: 10px;
+  border: none;
+  font-size: 1.5rem;
+}
+
+body{
+  align-items: flex-start;
+  flex-direction: flex;
+  margin: 0;
+}

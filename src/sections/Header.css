@@ -1,0 +1,31 @@
+/* Header*/
+.App-header{
+    width: 100vw;
+    display: flex;
+    /* position: sticky; */
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background-color: white;
+    box-shadow: inset 0px 0px 15px 0px #dddddd;
+    box-sizing: border-box;
+  
+  }
+  .header-nav-logo{
+    font-size: 1.7rem;
+    font-weight: 500;
+    /* color: var(--text-charcoal); #d28285, #7da49b */
+  }
+  
+  .header-nav-items{
+    display: flex;
+    column-gap: 50px;
+    font-size: 1.2rem;
+  }
+  .header-nav-items a{
+    color: #617792;
+    text-decoration: none;
+  }
+  .header-nav-items a:hover{
+    color: #c5d8e8;
+  }
