@@ -39,13 +39,13 @@ background: linear-gradient(6deg, rgb(219, 249, 239) 0%, rgb(220, 229, 237) 19%,
 
 /* Home Why */
 .HomeWhy{
-  padding: 40px 0;
+  padding: 80px 0;
 }
 /* See TitledImage.css in sections for the 3 titled icon section styles*/
 
 h2.whyHeading{
   text-align: center;
-  padding-bottom: 40px;
+  padding-bottom: 80px;
 }
 
 /* Home About */
