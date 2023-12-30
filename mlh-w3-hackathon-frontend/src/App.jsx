@@ -1,31 +1,34 @@
 import { useState } from 'react'
 import './App.css'
 
+//Page imports
+import Header from './sections/Header.jsx';
+
 function App() {
 
   return (
     <>
-      <HeaderNav/>
-    </>
-  )
-}
-
-function HeaderNav(){
-  return (
-    <>
-      <header className="App-header">
-        <h3 className="header-nav-logo">Your Contract</h3>
-        <div className="header-nav-items">
-          <a>Home</a>
-          <a>About</a>
-          <a>Contracts</a>
-          <a>Faqs</a>
-          <a>Login</a>
-          <a>Connect</a>
-        </div>
-      </header>
+      <Header/>
+      <HomeBanner/>
     </>
   );
 }
+
+function HomeBanner(){
+  return (
+    <div className="HomeBanner">
+      <div className='HomeBannerCTA'>
+        <h1 className='HomeBannerText'>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        </h1>
+        <button className='HomeBannerButton'>
+          Get Started
+        </button>
+      </div>
+    </div>
+  );
+}
+
+
 
 export default App
