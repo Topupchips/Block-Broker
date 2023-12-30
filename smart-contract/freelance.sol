@@ -1,5 +1,6 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.0;
+import "./ReputationToken.sol";
 
 contract FreelancerMarket {
     address public owner;
@@ -27,6 +28,7 @@ contract FreelancerMarket {
         string skills;
         uint totalJobsCompleted;
         uint totalEarned;
+        uint reputation;
     }
 
     mapping(address => FreelancerProfile) public freelancers;
@@ -60,6 +62,7 @@ contract FreelancerMarket {
 
     constructor() {
         owner = msg.sender;
+        reputationToken = new ReputationToken();
     }
 
     function createFreelancerProfile(string memory name, string memory skills) external {
@@ -71,6 +74,7 @@ contract FreelancerMarket {
             skills: skills,
             totalJobsCompleted: 0,
             totalEarned: 0
+            reputation: 0
         });
 
         emit FreelancerProfileCreated(msg.sender, name, skills);
@@ -122,6 +126,7 @@ contract FreelancerMarket {
         // Update freelancer profile
         freelancers[jobs[jobId].freelancer].totalJobsCompleted++;
         freelancers[jobs[jobId].freelancer].totalEarned += jobs[jobId].budget;
+        freelancers[jobs[jobId].freelancer].reputation += 1;
 
         jobs[jobId].verifiedByClient = true;
 
