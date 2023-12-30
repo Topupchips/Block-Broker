@@ -1,3 +1,5 @@
+import "./TitledImage.css"
+
 function TitledImage(props){
   
     //console.log("foldedOut: " + this.state.foldedOut.toString() + ", class: " + foldOutClass);
