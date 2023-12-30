@@ -19,8 +19,13 @@ function Home() {
           <HomeWhy/>
           <HomeAbout/>
         </div>
+        <HomeCTA/>
       </>
     );
+}
+
+function HomeCTA(){
+  
 }
 
 function HomeAbout(){

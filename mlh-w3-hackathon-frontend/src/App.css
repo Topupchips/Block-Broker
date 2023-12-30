@@ -1,6 +1,10 @@
-
+:root{
+  --text-charcoal: 
+  #58585a;
+}
 h1, h2, h3, p, a, button, p{
   font-family: 'Montserrat', sans-serif;
+  color: var(--text-charcoal);
 }
 /* Headings */
 h1{
@@ -17,6 +21,7 @@ h3{
 }
 p{
   font-size: 1.2rem;
+  font-weight: 500;
 }
 
 button{
@@ -44,7 +49,7 @@ body{
 .header-nav-logo{
   font-size: 1.7rem;
   font-weight: 500;
-  color: #7baab2; /*#d28285, #7da49b*/
+  /* color: var(--text-charcoal); #d28285, #7da49b */
 }
 
 .header-nav-items{
