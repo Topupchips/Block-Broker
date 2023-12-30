@@ -1,7 +1,9 @@
 //Section Imports
 import Header from '../sections/Header.jsx';
 import TitledImage from '../sections/TitledImage.jsx';
-import testImg from "../assets/aeee5775-208f-43da-a5e2-cf109c564c8a.jpeg";
+import contractIcon from "../assets/contracticon.png";
+import stockIcon from "../assets/stockicon.png";
+import talkingIcon from "../assets/talkingicon.png";
 
 function Home() {
 
@@ -19,10 +21,27 @@ function HomeWhy(){
     <div className="HomeWhy">
       <h2 className="whyHeading">Why Your Contract is Right for You</h2>
       <div className='foldoutContainer'>
-          <TitledImage title="Lorem Ipsum" imgUrl={testImg} alt='tbd' compId='why1'/>
-          <TitledImage title="Lorem Ipsum" imgUrl={testImg} alt='tbd' compId='why2'/>
-          <TitledImage title="Lorem Ipsum" imgUrl={testImg} alt='tbd' compId='why3'/>
-          <TitledImage title="Lorem Ipsum" imgUrl={testImg} alt='tbd' compId='why4'/>
+          <TitledImage 
+            title="Lorem Ipsum" 
+            imgUrl={contractIcon} 
+            alt='tbd' 
+            compId='why1'
+            description ="Etiam a risus at ipsum elementum convallis. Phasellus efficitur."
+          />
+          <TitledImage 
+            title="Lorem Ipsum"
+            imgUrl={stockIcon}
+            alt='tbd'
+            compId='why2'
+            description ="Etiam a risus at ipsum elementum convallis. Phasellus efficitur."
+          />
+          <TitledImage
+            title="Lorem Ipsum"
+            imgUrl={talkingIcon}
+            alt='tbd'
+            compId='why3'
+            description ="Etiam a risus at ipsum elementum convallis. Phasellus efficitur."
+          />
       </div>
     </div>
   );
