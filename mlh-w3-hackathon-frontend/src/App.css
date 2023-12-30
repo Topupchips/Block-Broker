@@ -31,6 +31,7 @@ body{
 .header-nav-logo{
   font-size: 1.7rem;
   font-weight: 500;
+  color: #7baab2; /*#d28285, #7da49b*/
 }
 
 .header-nav-items{
@@ -38,6 +39,14 @@ body{
   column-gap: 50px;
   font-size: 1.2rem;
 }
+.header-nav-items a{
+  color: #617792;
+  text-decoration: none;
+}
+.header-nav-items a:hover{
+  color: #c5d8e8;
+}
+
 
 /* Home */
 /* Home Banner */

@@ -1,15 +1,17 @@
+import { Link } from "react-router-dom"
+
 function Header(){
     return (
       <>
         <header className="App-header">
           <h3 className="header-nav-logo">Your Contract</h3>
           <div className="header-nav-items">
-            <a>Home</a>
-            <a>About</a>
-            <a>Contracts</a>
-            <a>Faqs</a>
-            <a>Login</a>
-            <a>Connect</a>
+            <Link to="/">Home</Link>
+            <Link to="/home#about">About</Link>
+            <Link to="/contracts">Contracts</Link>
+            <Link to="/faqs">Faqs</Link>
+            <Link to="login">Login</Link>
+            <Link to="connect">Connect</Link>
           </div>
         </header>
       </>
