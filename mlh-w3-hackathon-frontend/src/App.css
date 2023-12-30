@@ -1,11 +1,21 @@
+
 h1, h2, h3, p, a, button p{
   font-family: 'Montserrat', sans-serif;
 }
+/* Headings */
 h1{
   line-height: 3.5rem;
   font-size: 2.5rem;
   font-weight: 500;
 }
+h2{
+  font-size: 2rem;
+  font-weight: 500;
+}
+h3{
+  font-size: 1.5rem;
+}
+
 button{
   font-weight: 500;
 }
@@ -85,6 +95,37 @@ body{
   border-radius: 10px;
   border: none;
   font-size: 1.5rem;
+}
+
+.foldoutContainer{
+  max-width: 100%;
+  display: flex;
+  padding: o 7%;
+}
+
+.foldoutContainer > *{
+  width: 100%;
+}
+.foldoutImageContainer{
+  max-width: 200px;
+  padding: 0px 20px;
+  box-sizing: border-box;
+  margin: auto;
+}
+
+.foldoutImageContainer img{
+  max-width: 100%;
+}
+
+.foldoutImageTitle h3{
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+h2.whyHeading{
+  text-align: center;
+  padding: 40px;
 }
 
 /* End Home */
