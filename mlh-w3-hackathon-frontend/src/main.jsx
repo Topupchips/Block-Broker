@@ -7,6 +7,7 @@ import {
   RouterProvider
 } from "react-router-dom";
 import Contracts from './pages/Contracts.jsx';
+import LoginForm from './pages/loginform.jsx';
 
 const router = createBrowserRouter([
   {
@@ -17,6 +18,10 @@ const router = createBrowserRouter([
     path: "/contracts",
     element: <Contracts/>,
   },
+  {
+    path: "/login",
+    element: <LoginForm/>,
+  }
 ]);
 
 ReactDOM.createRoot(document.getElementById('root')).render(
