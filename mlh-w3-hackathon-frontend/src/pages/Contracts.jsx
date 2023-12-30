@@ -106,6 +106,7 @@ function AvailableContract(props){
                     <p className="availableContractPrice">{props.contractInfo.price}</p>
                 </div>
                 <p className="availableContractDescription">{props.contractInfo.description}</p>
+                <button>Apply</button>
             </div>
         </>
     );
