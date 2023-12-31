@@ -3,7 +3,16 @@
     padding: 60px 20px;
     background: rgb(201,249,232);
     background: linear-gradient(6deg, rgb(219, 249, 239) 0%, rgb(220, 229, 237) 19%, rgb(229, 222, 231) 39%, rgb(252, 234, 225) 56%, rgba(255,255,255,1) 100%);
+    
 }
+
+.ContractsBlockWrapper{
+    background-color: rgba(255, 255, 255, .5);
+    padding: 20px 10px 60px;
+    margin: 60px 0;
+    border-radius: 20px
+}
+
 .CarouselWrapper1{
     position: relative;
     width: 100%;
@@ -24,5 +33,20 @@
     display: none;
 }
 .react-multiple-carousel__arrow--right{
-    position: absolute;
+    position: absolute !important;
+    right: 0 !important;
+    background-color: rgba(255, 255, 255, 0.849) !important;
+    height: 20px;
+    border: 1px solid rgba(0, 0, 0, 0.109) !important;
+    
+}
+.react-multiple-carousel__arrow--right::before{
+    color: rgba(0, 0, 0, 0.65) !important;
+    top: -6px;
+    right: -1px;
+    
+}
+
+.ContractsBlockTop{
+    margin: 40px 15px ;
 }

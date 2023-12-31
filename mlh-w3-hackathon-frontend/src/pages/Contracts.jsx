@@ -212,12 +212,12 @@ function Contracts() {
 
 const responsive = {
     desktop: {
-      breakpoint: { max: 3000, min: 1024 },
+      breakpoint: { max: 3000, min: 1200 },
       items: 3,
       slidesToSlide: 3 // optional, default to 1.
     },
     tablet: {
-      breakpoint: { max: 1024, min: 464 },
+      breakpoint: { max: 1200, min: 464 },
       items: 2,
       slidesToSlide: 2 // optional, default to 1.
     },
@@ -242,8 +242,8 @@ function ContractsBlock(props) {
         componentsToRender.push(<ContractType classPrefix={props.classPrefix}contractInfo={props.contractsList[i]}/>);
     }
     return (
-      <>
-        <div className={props.classPrefix + "BlockTop"}>
+      <div className="ContractsBlockWrapper">
+        <div className={props.classPrefix + "BlockTop ContractsBlockTop"}>
             <h2 className={props.classPrefix + "BlockHeader"}>{props.title}</h2>
         </div>
         <div className="CarouselWrapper1">
@@ -266,7 +266,7 @@ function ContractsBlock(props) {
                 </Carousel>
             </div>
         </div>
-      </>
+      </div>
     );
 }
 
