@@ -2,6 +2,10 @@ import "./Contracts.css"
 import {AvailableContract, InProgressContract, YourOpenContract, YourWorkingContract} from "../sections/ContractBlocks.jsx"
 import Popup from 'reactjs-popup';
 import 'reactjs-popup/dist/index.css';
+import Carousel from 'react-multi-carousel';
+import 'react-multi-carousel/lib/styles.css';
+// import AliceCarousel from 'react-alice-carousel';
+// import 'react-alice-carousel/lib/alice-carousel.css';
 
 //Section Imports
 import Header from '../sections/Header.jsx';
@@ -95,25 +99,25 @@ const allContracts = [
     {
         jobId: 8,
         client: "52856954",
-        freelancer: null,
+        freelancer: "34345675",
         applicants: [],
         title: "Example Contract 8", 
         budget: "$1,000",
         description: "Vivamus rutrum mollis suscipit. Nulla ut nisl tellus. Ut sagittis purus risus, malesuada rutrum mi gravida eu. Morbi imperdiet mi justo, at tincidunt neque hendrerit vel. Quisque nec nibh ut nunc mattis mattis. In laoreet sapien ac laoreet bibendum.",
         proof: "something",
-        status: "open",
+        status: "in progress",
         verifiedByClient: false
     },
     {
         jobId: 9,
         client: "62345455",
-        freelancer: null,
+        freelancer: "34345675",
         applicants: [],
         title: "Example Contract 9", 
         budget: "$1,000",
         description: "Vivamus rutrum mollis suscipit. Nulla ut nisl tellus. Ut sagittis purus risus, malesuada rutrum mi gravida eu. Morbi imperdiet mi justo, at tincidunt neque hendrerit vel. Quisque nec nibh ut nunc mattis mattis. In laoreet sapien ac laoreet bibendum.",
         proof: "something",
-        status: "open",
+        status: "in progress",
         verifiedByClient: false
     },
     {
@@ -206,6 +210,66 @@ function Contracts() {
     );
 }
 
+const responsive = {
+    desktop: {
+      breakpoint: { max: 3000, min: 1024 },
+      items: 3,
+      slidesToSlide: 3 // optional, default to 1.
+    },
+    tablet: {
+      breakpoint: { max: 1024, min: 464 },
+      items: 2,
+      slidesToSlide: 2 // optional, default to 1.
+    },
+    mobile: {
+      breakpoint: { max: 464, min: 0 },
+      items: 1,
+      slidesToSlide: 1 // optional, default to 1.
+    }
+  };
+
+function ContractsBlock(props) {
+
+    if (props.contractsList.length == 0){
+        return (<></>);
+    }
+    let numToRender = Math.min(props.loadAmount, props.contractsList.length)
+    const componentsToRender = [];
+    const ContractType = props.contractType;
+    for (let i = 0; i < numToRender; i++) {
+        // note: we are adding a key prop here to allow react to uniquely identify each
+        // element in this array. see: https://reactjs.org/docs/lists-and-keys.html
+        componentsToRender.push(<ContractType classPrefix={props.classPrefix}contractInfo={props.contractsList[i]}/>);
+    }
+    return (
+      <>
+        <div className={props.classPrefix + "BlockTop"}>
+            <h2 className={props.classPrefix + "BlockHeader"}>{props.title}</h2>
+        </div>
+        <div className="CarouselWrapper1">
+            <div className="CarouselWrapper2">
+                <Carousel 
+                    swipeable={false}
+                    draggable={true}
+                    responsive={responsive}
+                    ssr={true} // means to render carousel on server-side.
+                    infinite={true}
+                    keyBoardControl={true}
+                    transitionDuration={500}
+                    partialVisible={true} 
+                    containerClass="carousel-container"
+                    removeArrowOnDeviceType={["tablet", "mobile"]}
+                    dotListClass="custom-dot-list-style"
+                    itemClass="carousel-item-padding-40-px">
+                    {/* {componentsToRender} */}
+                    {componentsToRender}
+                </Carousel>
+            </div>
+        </div>
+      </>
+    );
+}
+
 function ContractsTop(){
     return (
         <div className="contractsTop">
@@ -237,29 +301,6 @@ function ContractsTop(){
                 }
             </Popup>
         </div>
-    );
-}
-
-function ContractsBlock(props) {
-
-    if (props.contractsList.length == 0){
-        return (<></>);
-    }
-    let numToRender = Math.min(props.loadAmount, props.contractsList.length)
-    const componentsToRender = [];
-    const ContractType = props.contractType;
-    for (let i = 0; i < numToRender; i++) {
-        // note: we are adding a key prop here to allow react to uniquely identify each
-        // element in this array. see: https://reactjs.org/docs/lists-and-keys.html
-        componentsToRender.push(<ContractType classPrefix={props.classPrefix}contractInfo={props.contractsList[i]}/>);
-    }
-    return (
-      <>
-        <div className={props.classPrefix + "BlockTop"}>
-            <h2 className={props.classPrefix + "BlockHeader"}>{props.title}</h2>
-        </div>
-        {componentsToRender}
-      </>
     );
 }
 

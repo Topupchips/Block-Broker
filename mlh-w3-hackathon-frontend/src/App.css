@@ -39,3 +39,7 @@ body{
   flex-direction: flex;
   margin: 0;
 }
+
+[data-rk]{
+  background-color: white;
+}

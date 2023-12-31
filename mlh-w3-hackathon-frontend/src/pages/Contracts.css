@@ -1,6 +1,28 @@
 .ContractsWrapper{
-    height: fit-content;
-    padding: 60px;
+    height: 110%;
+    padding: 60px 20px;
     background: rgb(201,249,232);
     background: linear-gradient(6deg, rgb(219, 249, 239) 0%, rgb(220, 229, 237) 19%, rgb(229, 222, 231) 39%, rgb(252, 234, 225) 56%, rgba(255,255,255,1) 100%);
+}
+.CarouselWrapper1{
+    position: relative;
+    width: 100%;
+    height: fit-content;
+}
+.CarouselWrapper2{
+    position:relative;
+    width: 100%;
+    display: grid;
+    height:fit-content;
+    
+}
+.react-multi-carousel-list{
+    width: 100%;
+}
+
+.react-multiple-carousel__arrow--left{
+    display: none;
+}
+.react-multiple-carousel__arrow--right{
+    position: absolute;
 }
