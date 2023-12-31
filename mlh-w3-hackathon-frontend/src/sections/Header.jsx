@@ -5,7 +5,7 @@ function Header(){
     return (
       <>
         <header className="App-header">
-          <h3 className="header-nav-logo">Your Contract</h3>
+          <h3 className="header-nav-logo">Block Broker</h3>
           <div className="header-nav-items">
             <Link to="/">Home</Link>
             <Link to="/home#about">About</Link>

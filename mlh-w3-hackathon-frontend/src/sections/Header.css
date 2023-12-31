@@ -12,8 +12,11 @@
 
 }
 .header-nav-logo{
-  font-size: 1.7rem;
-  font-weight: 500;
+  font-size: 1.9rem;
+  font-weight: 300;
+  font-family: 'Mitr', sans-serif;
+  color: #607692;
+  text-transform: lowercase;
   /* color: var(--text-charcoal); #d28285, #7da49b */
 }
 
