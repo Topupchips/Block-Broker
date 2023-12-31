@@ -1,5 +1,7 @@
 import "./Contracts.css"
 import {AvailableContract, InProgressContract, YourOpenContract, YourWorkingContract} from "../sections/ContractBlocks.jsx"
+import Popup from 'reactjs-popup';
+import 'reactjs-popup/dist/index.css';
 
 //Section Imports
 import Header from '../sections/Header.jsx';
@@ -193,9 +195,7 @@ function Contracts() {
       <>
         <Header/>
         <div className="ContractsWrapper">
-            <div className="contractsTop">
-                <h1 className="contractsHeader">Contracts</h1>
-            </div>
+            <ContractsTop/>
             <ContractsBlock title="Your Open Contracts" classPrefix="YourOpenContracts" contractType={YourOpenContract} loadAmount={20} contractsList={yourOpenContracts}/>
             <ContractsBlock title="Contracts You Are Working On" classPrefix="YourWorkingContracts" contractType={YourWorkingContract} loadAmount={20} contractsList={contractsWorkedingOn}/>
             <ContractsBlock title="Your Contracts In Progress" classPrefix="InProgressContracts" contractType={InProgressContract} loadAmount={20} contractsList={inProgressContracts}/>
@@ -203,6 +203,40 @@ function Contracts() {
         </div>
         
       </>
+    );
+}
+
+function ContractsTop(){
+    return (
+        <div className="contractsTop">
+            <h1 className="contractsHeader">Contracts</h1>
+            <Popup trigger={<button className="popupButton">Create Contract</button>} modal nested>
+            {
+                    close => (
+                        <div className='modal'>
+                            <form>
+                                <label htmlFor="title">Job Title</label>
+                                <input type="text" name="title"/>
+
+                                <label htmlFor="budget">Budget</label>
+                                <input type="number" name="budget"/>
+
+                                <label htmlFor="description">Description</label>
+                                <textarea name="description" />
+
+                                <input type="submit" value="Submit Application" />
+                            </form>
+                            <div>
+                                <button onClick=
+                                    {() => close()}>
+                                        Close
+                                </button>
+                            </div>
+                        </div>
+                    )
+                }
+            </Popup>
+        </div>
     );
 }
 
