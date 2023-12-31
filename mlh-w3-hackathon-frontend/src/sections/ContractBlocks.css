@@ -31,3 +31,18 @@
     background-color: #9ee9ec;
     font-weight: 600;
 }
+
+.YourOpenContractsContainer .popupButton{
+    background-color: #fbdbcd;
+}
+.YourWorkingContractsContainer .popupButton{
+    background-color: #ebd3cf;
+}
+
+.InProgressContractsContainer .popupButton{
+    background-color: #c6cde6;
+}
+
+.AvailableContractsContainer .popupButton{
+    background-color: #c6efe6;
+}
