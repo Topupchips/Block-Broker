@@ -41,6 +41,14 @@ background: linear-gradient(6deg, rgb(219, 249, 239) 0%, rgb(220, 229, 237) 19%,
 .HomeWhy{
   padding: 80px 0;
 }
+
+.HomeWhy h3{
+  margin-top: 20px;
+  color: #607692;
+}
+.HomeWhy .titledImageDescription{
+  font-weight: 600;
+}
 /* See TitledImage.css in sections for the 3 titled icon section styles*/
 
 h2.whyHeading{
@@ -50,6 +58,10 @@ h2.whyHeading{
 
 /* Home About */
 /* See Card css in sections for card styles*/
+.HomeAbout p{
+  margin-top: 20px;
+  font-size: 1.4rem;
+}
 
 /* Home CTA */
 
