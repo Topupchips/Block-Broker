@@ -1,4 +1,5 @@
 import "./Contracts.css"
+import {AvailableContract, InProgressContract, YourOpenContract} from "../sections/ContractBlocks.jsx"
 
 //Section Imports
 import Header from '../sections/Header.jsx';
@@ -156,10 +157,10 @@ function organizeContracts(contractsList){
             if (contract.status == "open"){
                 availableContracts.push(contract);
             }
-        }
-        if (contract.freelancer == userId){
-            if (contract.status == "in progress" || contract.status == "complete"){
-                inProgressContracts.push(contract);
+            if (contract.freelancer == userId){
+                if (contract.status == "in progress" || contract.status == "complete"){
+                    inProgressContracts.push(contract);
+                }
             }
         }
     }
@@ -203,58 +204,58 @@ function ContractsBlock(props) {
     );
 }
 
-function YourOpenContract(props){
-    return (
-        <>
-            <div className={props.classPrefix + "Container ContractContainer"}>
-                <div className={props.classPrefix + "TopRow"}>
-                    <h4 className={props.classPrefix + "Title"}>{props.contractInfo.title}</h4>
-                    <p className={props.classPrefix + "Budget"}>{props.contractInfo.budget}</p>
-                </div>
-                <p className="availableContractDescription">{props.contractInfo.description}</p>
-                <ApplyButton jobId={props.contractInfo.jobId}/>
-            </div>
-        </>
-    );
-}
+// function YourOpenContract(props){
+//     return (
+//         <>
+//             <div className={props.classPrefix + "Container ContractContainer"}>
+//                 <div className={props.classPrefix + "TopRow"}>
+//                     <h4 className={props.classPrefix + "Title"}>{props.contractInfo.title}</h4>
+//                     <p className={props.classPrefix + "Budget"}>{props.contractInfo.budget}</p>
+//                 </div>
+//                 <p className="availableContractDescription">{props.contractInfo.description}</p>
+//                 <ApplyButton jobId={props.contractInfo.jobId}/>
+//             </div>
+//         </>
+//     );
+// }
 
-function InProgressContract(props){
-    return (
-        <>
-            <div className={props.classPrefix + "Container ContractContainer"}>
-                <div className={props.classPrefix + "TopRow"}>
-                    <h4 className={props.classPrefix + "Title"}>{props.contractInfo.title}</h4>
-                    <p className={props.classPrefix + "Budget"}>{props.contractInfo.budget}</p>
-                </div>
-                <p className={props.classPrefix + "Description"}>{props.contractInfo.description}</p>
-                <ApplyButton jobId={props.contractInfo.jobId}/>
-            </div>
-        </>
-    );
-}
+// function InProgressContract(props){
+//     return (
+//         <>
+//             <div className={props.classPrefix + "Container ContractContainer"}>
+//                 <div className={props.classPrefix + "TopRow"}>
+//                     <h4 className={props.classPrefix + "Title"}>{props.contractInfo.title}</h4>
+//                     <p className={props.classPrefix + "Budget"}>{props.contractInfo.budget}</p>
+//                 </div>
+//                 <p className={props.classPrefix + "Description"}>{props.contractInfo.description}</p>
+//                 <ApplyButton jobId={props.contractInfo.jobId}/>
+//             </div>
+//         </>
+//     );
+// }
 
-function AvailableContract(props){
-    return (
-        <>
-            <div className={props.classPrefix + "Container ContractContainer"}>
-                <div className={props.classPrefix + "TopRow"}>
-                    <h4 className={props.classPrefix + "Title"}>{props.contractInfo.title}</h4>
-                    <p className={props.classPrefix + "Budget"}>{props.contractInfo.budget}</p>
-                </div>
-                <p className="availableContractDescription">{props.contractInfo.description}</p>
-                <ApplyButton jobId={props.contractInfo.jobId}/>
-            </div>
-        </>
-    );
-}
+// function AvailableContract(props){
+//     return (
+//         <>
+//             <div className={props.classPrefix + "Container ContractContainer"}>
+//                 <div className={props.classPrefix + "TopRow"}>
+//                     <h4 className={props.classPrefix + "Title"}>{props.contractInfo.title}</h4>
+//                     <p className={props.classPrefix + "Budget"}>{props.contractInfo.budget}</p>
+//                 </div>
+//                 <p className="availableContractDescription">{props.contractInfo.description}</p>
+//                 <ApplyButton jobId={props.contractInfo.jobId}/>
+//             </div>
+//         </>
+//     );
+// }
 
-function ApplyButton(props){
-    return (
-        <>
-            <button>Apply</button>
-        </>
-    );
-}
+// function ApplyButton(props){
+//     return (
+//         <>
+//             <button>Apply</button>
+//         </>
+//     );
+// }
 
 
 export default Contracts;
