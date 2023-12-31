@@ -130,7 +130,28 @@ function ViewApplicantsButton(props){
 function MarkCompleteButton(props){
     return (
         <>
-            <button className="popupButton">Mark Complete</button>
+            <Popup trigger={<button className="popupButton">Mark Complete</button>} modal nested>
+            {
+                    close => (
+                        <div className='modal'>
+                            <form>
+                                <label>
+                                    <p>I have completed all of the requirements of the project pending approval.</p>
+                                    <input type="checkbox" name="Confirmation" required/>
+                                </label>
+                                <input type="submit" value="Submit for Approval" />
+                            </form>
+                            <div>
+                                <button onClick=
+                                    {() => close()}>
+                                        Close
+                                </button>
+                            </div>
+                        </div>
+                    )
+                }
+            </Popup>  
+            
         </>
     );
 }
@@ -138,7 +159,27 @@ function MarkCompleteButton(props){
 function ApproveCompletionButton(props){
     return (
         <>
-            <button className="popupButton">Approve Completion</button>
+            <Popup trigger={<button className="popupButton">Approve Completion</button>} modal nested>
+            {
+                    close => (
+                        <div className='modal'>
+                            <form>
+                                <label>
+                                    <p>All of the project requirements have been fullfilled and payment can be released. There are no takebackseys.</p>
+                                    <input type="checkbox" name="Confirmation" required/>
+                                </label>
+                                <input type="submit" value="Approve Completion" />
+                            </form>
+                            <div>
+                                <button onClick=
+                                    {() => close()}>
+                                        Close
+                                </button>
+                            </div>
+                        </div>
+                    )
+                }
+            </Popup>
         </>
     );
 }
