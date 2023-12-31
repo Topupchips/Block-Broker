@@ -274,7 +274,7 @@ function ContractsBlock(props) {
 
 function ContractsTop(){
     return (
-        <div className="ContractsTop">
+        <div className="ContractsTop" id="contractstop">
             <div className="ContractsTopTextBackground">
                 <h1 className="ContractsHeader">Contracts</h1>
                 <p className="ContractsTopDescription">Create a contract for a freelancer to fullfill or search for available contracts. All with a blockchain broker</p>

@@ -39,6 +39,12 @@ button:hover{
   filter: saturate(1.8); /*hover effect for now*/
 }
 
+.inlineLogo{
+  font-family: 'Mitr', sans-serif;
+  font-weight: 300;
+  color: #607692;
+}
+
 body{
   align-items: flex-start;
   flex-direction: flex;

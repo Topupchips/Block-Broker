@@ -1,4 +1,6 @@
 import "./Home.css";
+import { HashLink as Link } from 'react-router-hash-link';
+
 
 //Section Imports
 import Header from '../sections/Header.jsx';
@@ -30,8 +32,8 @@ function HomeCTA(){
   return (
     <div className='HomeCTA'>
       <div className="bannerCtaTextWrapper">
-        <h2>Lorem Ipsum Dolor Amet Aenean blandit, massa a viverra!</h2>
-        <button>Get Started</button>
+        <h2>Take the first step towards breaking down your blockers!</h2>
+        <Link to="/contracts#contractstop"><button>Get Started</button></Link>
       </div>
     </div>
   );
@@ -41,10 +43,10 @@ function HomeCTA(){
 function HomeAbout(){
 
   let aboutHeading = "Our Mission";
-  let aboutParagraph = "Donec eu porta turpis. Aenean blandit, massa a viverra dictum, purus erat aliquet turpis, quis eleifend purus nunc ac erat. Nam pharetra turpis sit amet lacinia aliquet. Vestibulum at placerat odio. Sed ex nisi, semper eget metus non, dapibus feugiat est. Integer nec condimentum elit. Mauris lobortis, nisl eget euismod porta, ex velit faucibus lacus, ut lobortis turpis lectus id risus. Praesent laoreet a velit sed elementum. ";
+  let aboutParagraph = "The inspiration behind Block Broker stems from a vision to revolutionize the freelance industry by leveraging blockchain technology. We aim to create a decentralized platform that empowers freelancers, connects clients with top talent, and eliminates the need for intermediaries.";
 
   return (
-    <div className="HomeAbout">
+    <div className="HomeAbout" id="about">
       <Card imgUrl={aboutImage} imgAlt="image of blocks" heading={aboutHeading} paragraph={aboutParagraph}/>
     </div>
   );
@@ -53,28 +55,28 @@ function HomeAbout(){
 function HomeWhy(){
   return (
     <div className="HomeWhy">
-      <h2 className="whyHeading">Why Your Contract is Right for You</h2>
+      <h2 className="whyHeading">How <span className="inlineLogo">block broker</span> can help you</h2>
       <div className='foldoutContainer'>
           <TitledImage 
-            title="Lorem Ipsum" 
+            title="Quick Fund Transfer" 
             imgUrl={contractIcon} 
             alt='tbd' 
             compId='why1'
-            description ="Etiam a risus at ipsum elementum convallis. Phasellus efficitur."
+            description ="With every transaction being handled by a smart contract, fund are quickly tansfered once a contract is approved."
           />
           <TitledImage 
-            title="Lorem Ipsum"
+            title="No Middleman Means More Money"
             imgUrl={stockIcon}
             alt='tbd'
             compId='why2'
-            description ="Etiam a risus at ipsum elementum convallis. Phasellus efficitur."
+            description ="With all transactions being handled by smart contracts, the only fees are the gas needed to power the transaction."
           />
           <TitledImage
-            title="Lorem Ipsum"
+            title="Connect with a Community"
             imgUrl={talkingIcon}
             alt='tbd'
             compId='why3'
-            description ="Etiam a risus at ipsum elementum convallis. Phasellus efficitur."
+            description ="Connect with businesses and freelancers and build a patnership without having to worry about non-competes."
           />
       </div>
     </div>
@@ -87,11 +89,14 @@ function HomeBanner(){
     <div className="HomeBanner">
       <div className='HomeBannerCTA'>
         <h1 className='HomeBannerText'>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        Breaking down blockers between freelancers
         </h1>
-        <button className='HomeBannerButton'>
+        <Link to="/contracts#contractstop">
+          <button className='HomeBannerButton'>
           Get Started
-        </button>
+          </button>
+        </Link>
+        
       </div>
     </div>
   );
