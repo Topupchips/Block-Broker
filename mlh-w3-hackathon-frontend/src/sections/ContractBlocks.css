@@ -1,0 +1,48 @@
+.ContractContainer{
+    background-color: rgba(255, 255, 255, 0.594);
+    padding: 40px;
+    border-radius: 20px;
+    max-width: 400px;
+    width: 400px;
+    margin: 20px 10px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;}
+
+.ContractContainer .TopRow{
+    display: flex;
+    justify-content: space-between;
+}
+.ContractContainer h4{
+    font-size: 1.4rem;
+}
+.ContractContainer .TopRow p{
+    font-style: italic;
+    color: #4c9274;
+}
+.ContractContainer .ContractDescription{
+    margin: 20px 0;
+    line-height: 1.6rem;
+}
+.ContractContainer .popupButton{
+    font-size: 1.2rem;
+    width: 100%;
+    margin: auto;
+    text-align: center;
+    padding: 10px 0;
+    background-color: #9ee9ec;
+    font-weight: 600;
+}
+
+.YourOpenContractsContainer .popupButton{
+    background-color: #fbdbcd;
+}
+.YourWorkingContractsContainer .popupButton{
+    background-color: #ebd3cf;
+}
+
+.InProgressContractsContainer .popupButton{
+    background-color: #c6cde6;
+}
+
+.AvailableContractsContainer .popupButton{
+    background-color: #c6efe6;
+}
