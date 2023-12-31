@@ -3,8 +3,10 @@
 pragma solidity ^0.8.0;
 
 import "@openzeppelin/contracts/token/ERC20/ERC20.sol";
+import "@hashgraph/contracts/token/ILPSCToken.sol";
+import "@hashgraph/contracts/token/HederaTokenService.sol"
 
-contract ReputationToken is ERC20 {
+contract ReputationToken is ERC20, ILPSCToken, HederaTokenService {
     address public owner;
 
     constructor() ERC20("ReputationToken", "REP") {
