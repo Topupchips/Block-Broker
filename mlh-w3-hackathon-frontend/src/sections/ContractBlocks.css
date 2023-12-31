@@ -3,5 +3,31 @@
     padding: 40px;
     border-radius: 20px;
     max-width: 400px;
+    width: 400px;
     margin: 0 15px;
+}
+
+.ContractContainer .TopRow{
+    display: flex;
+    justify-content: space-between;
+}
+.ContractContainer h4{
+    font-size: 1.4rem;
+}
+.ContractContainer .TopRow p{
+    font-style: italic;
+    color: #4c9274;
+}
+.ContractContainer .ContractDescription{
+    margin: 20px 0;
+    line-height: 1.6rem;
+}
+.ContractContainer .popupButton{
+    font-size: 1.2rem;
+    width: 100%;
+    margin: auto;
+    text-align: center;
+    padding: 10px 0;
+    background-color: #9ee9ec;
+    font-weight: 600;
 }

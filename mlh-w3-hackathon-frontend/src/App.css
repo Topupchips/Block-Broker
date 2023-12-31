@@ -3,7 +3,7 @@
   #58585a;
   --text-window-white: rgba(255, 255, 255, .9);
 }
-h1, h2, h3, p, a, button, p{
+h1, h2, h3, h4, p, a, button, p{
   font-family: 'Montserrat', sans-serif;
   color: var(--text-charcoal);
 }

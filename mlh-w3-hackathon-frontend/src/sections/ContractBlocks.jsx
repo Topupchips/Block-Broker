@@ -6,11 +6,11 @@ export function YourOpenContract(props){
     return (
         <>
             <div className={props.classPrefix + "Container ContractContainer"}>
-                <div className={props.classPrefix + "TopRow"}>
+                <div className={props.classPrefix + "TopRow TopRow"}>
                     <h4 className={props.classPrefix + "Title"}>{props.contractInfo.title}</h4>
                     <p className={props.classPrefix + "Budget"}>{props.contractInfo.budget}</p>
                 </div>
-                <p className="availableContractDescription">{props.contractInfo.description}</p>
+                <p className="ContractDescription">{props.contractInfo.description}</p>
                 <ViewApplicantsButton job={props.contractInfo}/>
             </div>
         </>
@@ -21,11 +21,11 @@ export function YourWorkingContract(props){
     return (
         <>
             <div className={props.classPrefix + "Container ContractContainer"}>
-                <div className={props.classPrefix + "TopRow"}>
+                <div className={props.classPrefix + "TopRow TopRow"}>
                     <h4 className={props.classPrefix + "Title"}>{props.contractInfo.title}</h4>
                     <p className={props.classPrefix + "Budget"}>{props.contractInfo.budget}</p>
                 </div>
-                <p className={props.classPrefix + "Description"}>{props.contractInfo.description}</p>
+                <p className="ContractDescription">{props.contractInfo.description}</p>
                 <MarkCompleteButton job={props.contractInfo}/>
             </div>
         </>
@@ -36,11 +36,11 @@ export function InProgressContract(props){
     return (
         <>
             <div className={props.classPrefix + "Container ContractContainer"}>
-                <div className={props.classPrefix + "TopRow"}>
+                <div className={props.classPrefix + "TopRow TopRow"}>
                     <h4 className={props.classPrefix + "Title"}>{props.contractInfo.title}</h4>
                     <p className={props.classPrefix + "Budget"}>{props.contractInfo.budget}</p>
                 </div>
-                <p className={props.classPrefix + "Description"}>{props.contractInfo.description}</p>
+                <p className="ContractDescription">{props.contractInfo.description}</p>
                 <ApproveCompletionButton job={props.contractInfo}/>
             </div>
         </>
@@ -51,11 +51,11 @@ export function AvailableContract(props){
     return (
         <>
             <div className={props.classPrefix + "Container ContractContainer"}>
-                <div className={props.classPrefix + "TopRow"}>
+                <div className={props.classPrefix + "TopRow TopRow"}>
                     <h4 className={props.classPrefix + "Title"}>{props.contractInfo.title}</h4>
                     <p className={props.classPrefix + "Budget"}>{props.contractInfo.budget}</p>
                 </div>
-                <p className="availableContractDescription">{props.contractInfo.description}</p>
+                <p className="ContractDescription">{props.contractInfo.description}</p>
                 <ApplyButton job={props.contractInfo}/>
             </div>
         </>
