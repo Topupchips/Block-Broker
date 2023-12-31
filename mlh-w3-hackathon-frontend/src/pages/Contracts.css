@@ -1,15 +1,55 @@
 .ContractsWrapper{
     height: 110%;
-    padding: 60px 20px;
+
     background: rgb(201,249,232);
     background: linear-gradient(6deg, rgb(219, 249, 239) 0%, rgb(220, 229, 237) 19%, rgb(229, 222, 231) 39%, rgb(252, 234, 225) 56%, rgba(255,255,255,1) 100%);
     
 }
 
+.ContractsTop{
+    text-align: center;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: url("../assets/91e1311c-a9e3-4115-8811-c59173178297.jpeg");
+    background-size: cover;
+}
+
+.ContractsTopTextBackground{
+    max-width: 60%;
+    max-height: 90%;
+    height: fit-content;
+    padding: 3vw;
+    background-color: var(--text-window-white);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+}
+
+.ContractsTopDescription{
+    font-size: 1.6rem;
+    margin: 20px 0;
+}
+
+.ContractsTop .popupButton{
+    background-color: #9ee9ec;
+}
+
+.ContractsBody{
+    padding: 50px 0;
+}
+
+.ContractsBlockWrapper:first-child{
+    margin-top: 0;
+}
+
 .ContractsBlockWrapper{
     background-color: rgba(255, 255, 255, .5);
     padding: 20px 10px 60px;
-    margin: 60px 0;
+    margin: 70px 30px 0px;
     border-radius: 20px
 }
 

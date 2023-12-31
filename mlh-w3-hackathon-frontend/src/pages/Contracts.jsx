@@ -200,10 +200,12 @@ function Contracts() {
         <Header/>
         <div className="ContractsWrapper">
             <ContractsTop/>
-            <ContractsBlock title="Your Open Contracts" classPrefix="YourOpenContracts" contractType={YourOpenContract} loadAmount={20} contractsList={yourOpenContracts}/>
-            <ContractsBlock title="Contracts You Are Working On" classPrefix="YourWorkingContracts" contractType={YourWorkingContract} loadAmount={20} contractsList={contractsWorkedingOn}/>
-            <ContractsBlock title="Your Contracts In Progress" classPrefix="InProgressContracts" contractType={InProgressContract} loadAmount={20} contractsList={inProgressContracts}/>
-            <ContractsBlock title="Available Contracts" classPrefix="AvailableContracts" contractType={AvailableContract} loadAmount={20} contractsList={availableContracts}/>
+            <div className="ContractsBody">
+                <ContractsBlock title="Your Open Contracts" classPrefix="YourOpenContracts" contractType={YourOpenContract} loadAmount={20} contractsList={yourOpenContracts}/>
+                <ContractsBlock title="Contracts You Are Working On" classPrefix="YourWorkingContracts" contractType={YourWorkingContract} loadAmount={20} contractsList={contractsWorkedingOn}/>
+                <ContractsBlock title="Your Contracts In Progress" classPrefix="InProgressContracts" contractType={InProgressContract} loadAmount={20} contractsList={inProgressContracts}/>
+                <ContractsBlock title="Available Contracts" classPrefix="AvailableContracts" contractType={AvailableContract} loadAmount={20} contractsList={availableContracts}/>
+            </div>
         </div>
         
       </>
@@ -272,34 +274,37 @@ function ContractsBlock(props) {
 
 function ContractsTop(){
     return (
-        <div className="contractsTop">
-            <h1 className="contractsHeader">Contracts</h1>
-            <Popup trigger={<button className="popupButton">Create Contract</button>} modal nested>
-            {
-                    close => (
-                        <div className='modal'>
-                            <form>
-                                <label htmlFor="title">Job Title</label>
-                                <input type="text" name="title"/>
+        <div className="ContractsTop">
+            <div className="ContractsTopTextBackground">
+                <h1 className="ContractsHeader">Contracts</h1>
+                <p className="ContractsTopDescription">Create a contract for a freelancer to fullfill or search for available contracts. All with a blockchain broker</p>
+                <Popup trigger={<button className="popupButton">Create Contract</button>} modal nested>
+                {
+                        close => (
+                            <div className='modal'>
+                                <form>
+                                    <label htmlFor="title">Job Title</label>
+                                    <input type="text" name="title"/>
 
-                                <label htmlFor="budget">Budget</label>
-                                <input type="number" name="budget"/>
+                                    <label htmlFor="budget">Budget</label>
+                                    <input type="number" name="budget"/>
 
-                                <label htmlFor="description">Description</label>
-                                <textarea name="description" />
+                                    <label htmlFor="description">Description</label>
+                                    <textarea name="description" />
 
-                                <input type="submit" value="Submit Application" />
-                            </form>
-                            <div>
-                                <button onClick=
-                                    {() => close()}>
-                                        Close
-                                </button>
+                                    <input type="submit" value="Submit Application" />
+                                </form>
+                                <div>
+                                    <button onClick=
+                                        {() => close()}>
+                                            Close
+                                    </button>
+                                </div>
                             </div>
-                        </div>
-                    )
-                }
-            </Popup>
+                        )
+                    }
+                </Popup>
+            </div>
         </div>
     );
 }
