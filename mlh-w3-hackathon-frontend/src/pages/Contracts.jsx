@@ -1,15 +1,16 @@
 import "./Contracts.css"
-import {AvailableContract, InProgressContract, YourOpenContract} from "../sections/ContractBlocks.jsx"
+import {AvailableContract, InProgressContract, YourOpenContract, YourWorkingContract} from "../sections/ContractBlocks.jsx"
 
 //Section Imports
 import Header from '../sections/Header.jsx';
-const userId = "34345675";
+const userId = "34345675"; // has all types of component data
+//const userId = "52856954";
 const allContracts = [
     {
         jobId: 1,
         client: "12345675",
         freelancer: null,
-        applied: [],
+        applicants: [],
         title: "Example Contract 1", 
         budget: "$1,000",
         description: "Vivamus rutrum mollis suscipit. Nulla ut nisl tellus. Ut sagittis purus risus, malesuada rutrum mi gravida eu. Morbi imperdiet mi justo, at tincidunt neque hendrerit vel. Quisque nec nibh ut nunc mattis mattis. In laoreet sapien ac laoreet bibendum.",
@@ -21,7 +22,7 @@ const allContracts = [
         jobId: 2,
         client: "12345675",
         freelancer: null,
-        applied: [],
+        applicants: [],
         title: "Example Contract 2", 
         budget: "$1,000",
         description: "Vivamus rutrum mollis suscipit. Nulla ut nisl tellus. Ut sagittis purus risus, malesuada rutrum mi gravida eu. Morbi imperdiet mi justo, at tincidunt neque hendrerit vel. Quisque nec nibh ut nunc mattis mattis. In laoreet sapien ac laoreet bibendum.",
@@ -33,7 +34,7 @@ const allContracts = [
         jobId: 3,
         client: "34345675",
         freelancer: null,
-        applied: [],
+        applicants: ["234324234", "24352345", "2452451"],
         title: "Example Contract 3", 
         budget: "$1,000",
         description: "Vivamus rutrum mollis suscipit. Nulla ut nisl tellus. Ut sagittis purus risus, malesuada rutrum mi gravida eu. Morbi imperdiet mi justo, at tincidunt neque hendrerit vel. Quisque nec nibh ut nunc mattis mattis. In laoreet sapien ac laoreet bibendum.",
@@ -44,20 +45,20 @@ const allContracts = [
     {
         jobId: 4,
         client: "34345675",
-        freelancer: null,
-        applied: [],
+        freelancer: "123434145",
+        applicants: [],
         title: "Example Contract 4", 
         budget: "$1,000",
         description: "Vivamus rutrum mollis suscipit. Nulla ut nisl tellus. Ut sagittis purus risus, malesuada rutrum mi gravida eu. Morbi imperdiet mi justo, at tincidunt neque hendrerit vel. Quisque nec nibh ut nunc mattis mattis. In laoreet sapien ac laoreet bibendum.",
         proof: "something",
-        status: "open",
+        status: "in progress",
         verifiedByClient: false
     },
     {
         jobId: 5,
         client: "52856954",
         freelancer: "34345675",
-        applied: [],
+        applicants: [],
         title: "Example Contract 5", 
         budget: "$1,000",
         description: "Vivamus rutrum mollis suscipit. Nulla ut nisl tellus. Ut sagittis purus risus, malesuada rutrum mi gravida eu. Morbi imperdiet mi justo, at tincidunt neque hendrerit vel. Quisque nec nibh ut nunc mattis mattis. In laoreet sapien ac laoreet bibendum.",
@@ -69,7 +70,7 @@ const allContracts = [
         jobId: 6,
         client: "52856954",
         freelancer: "34345675",
-        applied: [],
+        applicants: [],
         title: "Example Contract 6", 
         budget: "$1,000",
         description: "Vivamus rutrum mollis suscipit. Nulla ut nisl tellus. Ut sagittis purus risus, malesuada rutrum mi gravida eu. Morbi imperdiet mi justo, at tincidunt neque hendrerit vel. Quisque nec nibh ut nunc mattis mattis. In laoreet sapien ac laoreet bibendum.",
@@ -81,7 +82,7 @@ const allContracts = [
         jobId: 7,
         client: "63556361",
         freelancer: "343683863",
-        applied: [],
+        applicants: [],
         title: "Example Contract 7", 
         budget: "$1,000",
         description: "Vivamus rutrum mollis suscipit. Nulla ut nisl tellus. Ut sagittis purus risus, malesuada rutrum mi gravida eu. Morbi imperdiet mi justo, at tincidunt neque hendrerit vel. Quisque nec nibh ut nunc mattis mattis. In laoreet sapien ac laoreet bibendum.",
@@ -93,7 +94,7 @@ const allContracts = [
         jobId: 8,
         client: "52856954",
         freelancer: null,
-        applied: [],
+        applicants: [],
         title: "Example Contract 8", 
         budget: "$1,000",
         description: "Vivamus rutrum mollis suscipit. Nulla ut nisl tellus. Ut sagittis purus risus, malesuada rutrum mi gravida eu. Morbi imperdiet mi justo, at tincidunt neque hendrerit vel. Quisque nec nibh ut nunc mattis mattis. In laoreet sapien ac laoreet bibendum.",
@@ -105,7 +106,7 @@ const allContracts = [
         jobId: 9,
         client: "62345455",
         freelancer: null,
-        applied: [],
+        applicants: [],
         title: "Example Contract 9", 
         budget: "$1,000",
         description: "Vivamus rutrum mollis suscipit. Nulla ut nisl tellus. Ut sagittis purus risus, malesuada rutrum mi gravida eu. Morbi imperdiet mi justo, at tincidunt neque hendrerit vel. Quisque nec nibh ut nunc mattis mattis. In laoreet sapien ac laoreet bibendum.",
@@ -117,7 +118,7 @@ const allContracts = [
         jobId: 10,
         client: "62345455",
         freelancer: null,
-        applied: [],
+        applicants: [],
         title: "Example Contract 10", 
         budget: "$1,000",
         description: "Vivamus rutrum mollis suscipit. Nulla ut nisl tellus. Ut sagittis purus risus, malesuada rutrum mi gravida eu. Morbi imperdiet mi justo, at tincidunt neque hendrerit vel. Quisque nec nibh ut nunc mattis mattis. In laoreet sapien ac laoreet bibendum.",
@@ -129,7 +130,7 @@ const allContracts = [
         jobId: 11,
         client: "62345455",
         freelancer: "34345675",
-        applied: [],
+        applicants: [],
         title: "Example Contract 11", 
         budget: "$1,000",
         description: "Vivamus rutrum mollis suscipit. Nulla ut nisl tellus. Ut sagittis purus risus, malesuada rutrum mi gravida eu. Morbi imperdiet mi justo, at tincidunt neque hendrerit vel. Quisque nec nibh ut nunc mattis mattis. In laoreet sapien ac laoreet bibendum.",
@@ -139,29 +140,49 @@ const allContracts = [
     }
 ];
 
-const availableContracts = [];
-const yourOpenContracts = []
-const inProgressContracts = [];
+const availableContracts = []; // All contracts marked as open (not including your own)
+const yourOpenContracts = [] // The user's own contracts that are open
+const inProgressContracts = []; // User's Contracts that are currently being worked on by a freelancer
+const contractsWorkedingOn = []; // Contracts the user are currently working on
+const paidContracts = []; // Contracts the user has paid out
+const completedContracts = []; // Contracts that the user has completed work on
+const contractApplications = [] // Contracts you've applied for
 
 function organizeContracts(contractsList){
     availableContracts.length = 0; // clears array
     inProgressContracts.length = 0; // clears array
     yourOpenContracts.length = 0; // clears array
+    contractsWorkedingOn.length = 0; //clears array
     for (let contract of contractsList){
         if (contract.client == userId){
             if (contract.status == "open"){
                 yourOpenContracts.push(contract);
             }
+            if (contract.status == "in progress" || contract.status == "complete"){
+                inProgressContracts.push(contract);
+            }
+            if (contract.status == "approved"){
+                paidContracts.push(contract);
+            }
         }
         else{
-            if (contract.status == "open"){
-                availableContracts.push(contract);
-            }
             if (contract.freelancer == userId){
                 if (contract.status == "in progress" || contract.status == "complete"){
-                    inProgressContracts.push(contract);
+                    contractsWorkedingOn.push(contract);
+                }
+                if (contract.status == "approved"){
+                    completedContracts.push(contract);
                 }
             }
+            else if (contract.status == "open"){
+                if (contract.applicants.includes(userId)){
+                    contractApplications.push(contract);
+                }
+                else{
+                    availableContracts.push(contract);
+                }
+            }
+            
         }
     }
 }
@@ -176,7 +197,8 @@ function Contracts() {
                 <h1 className="contractsHeader">Contracts</h1>
             </div>
             <ContractsBlock title="Your Open Contracts" classPrefix="YourOpenContracts" contractType={YourOpenContract} loadAmount={20} contractsList={yourOpenContracts}/>
-            <ContractsBlock title="Contracts In Progress" classPrefix="InProgressContracts" contractType={InProgressContract} loadAmount={20} contractsList={inProgressContracts}/>
+            <ContractsBlock title="Contracts You Are Working On" classPrefix="YourWorkingContracts" contractType={YourWorkingContract} loadAmount={20} contractsList={contractsWorkedingOn}/>
+            <ContractsBlock title="Your Contracts In Progress" classPrefix="InProgressContracts" contractType={InProgressContract} loadAmount={20} contractsList={inProgressContracts}/>
             <ContractsBlock title="Available Contracts" classPrefix="AvailableContracts" contractType={AvailableContract} loadAmount={20} contractsList={availableContracts}/>
         </div>
         
@@ -186,6 +208,9 @@ function Contracts() {
 
 function ContractsBlock(props) {
 
+    if (props.contractsList.length == 0){
+        return (<></>);
+    }
     let numToRender = Math.min(props.loadAmount, props.contractsList.length)
     const componentsToRender = [];
     const ContractType = props.contractType;
@@ -203,59 +228,6 @@ function ContractsBlock(props) {
       </>
     );
 }
-
-// function YourOpenContract(props){
-//     return (
-//         <>
-//             <div className={props.classPrefix + "Container ContractContainer"}>
-//                 <div className={props.classPrefix + "TopRow"}>
-//                     <h4 className={props.classPrefix + "Title"}>{props.contractInfo.title}</h4>
-//                     <p className={props.classPrefix + "Budget"}>{props.contractInfo.budget}</p>
-//                 </div>
-//                 <p className="availableContractDescription">{props.contractInfo.description}</p>
-//                 <ApplyButton jobId={props.contractInfo.jobId}/>
-//             </div>
-//         </>
-//     );
-// }
-
-// function InProgressContract(props){
-//     return (
-//         <>
-//             <div className={props.classPrefix + "Container ContractContainer"}>
-//                 <div className={props.classPrefix + "TopRow"}>
-//                     <h4 className={props.classPrefix + "Title"}>{props.contractInfo.title}</h4>
-//                     <p className={props.classPrefix + "Budget"}>{props.contractInfo.budget}</p>
-//                 </div>
-//                 <p className={props.classPrefix + "Description"}>{props.contractInfo.description}</p>
-//                 <ApplyButton jobId={props.contractInfo.jobId}/>
-//             </div>
-//         </>
-//     );
-// }
-
-// function AvailableContract(props){
-//     return (
-//         <>
-//             <div className={props.classPrefix + "Container ContractContainer"}>
-//                 <div className={props.classPrefix + "TopRow"}>
-//                     <h4 className={props.classPrefix + "Title"}>{props.contractInfo.title}</h4>
-//                     <p className={props.classPrefix + "Budget"}>{props.contractInfo.budget}</p>
-//                 </div>
-//                 <p className="availableContractDescription">{props.contractInfo.description}</p>
-//                 <ApplyButton jobId={props.contractInfo.jobId}/>
-//             </div>
-//         </>
-//     );
-// }
-
-// function ApplyButton(props){
-//     return (
-//         <>
-//             <button>Apply</button>
-//         </>
-//     );
-// }
 
 
 export default Contracts;
