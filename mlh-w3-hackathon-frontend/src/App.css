@@ -3,7 +3,7 @@
   #58585a;
   --text-window-white: rgba(255, 255, 255, .9);
 }
-h1, h2, h3, h4, p, a, button, p{
+h1, h2, h3, h4, p, a, button, p, label, input, textarea{
   font-family: 'Montserrat', sans-serif;
   color: var(--text-charcoal);
   text-decoration: none;
@@ -35,7 +35,16 @@ button{
   font-size: 1.5rem;
 }
 
-button:hover{
+input[type="number"] {
+  -webkit-appearance: textfield;
+     -moz-appearance: textfield;
+          appearance: textfield;
+}
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none;
+}
+button:hover, .popupFormSubmit:hover{
   /* opacity: .7; */
   filter: saturate(1.8); /*hover effect for now*/
 }

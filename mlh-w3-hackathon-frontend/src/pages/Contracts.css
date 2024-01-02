@@ -90,3 +90,122 @@
 .ContractsBlockTop{
     margin: 40px 15px ;
 }
+
+/* Popup Form Styling */
+
+.popup-overlay{
+    background: linear-gradient(6deg, rgba(220, 249, 239, 0.85) 0%, rgba(220, 229, 237, 0.85) 19%, rgba(229, 222, 231, 0.85) 39%, rgba(252, 234, 225, 0.85) 56%, rgba(255, 255, 255, 0.85)100%) !important;
+}
+
+.popup-content{
+    width: 60% !important;
+    border-radius: 20px;
+    border: none !important;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+    background-color: var(--text-window-white) !important;
+}
+
+.popupCloseButton{
+    /* background: rgb(231, 248, 255); */
+    background-color: rgb(255, 255, 255);
+    color: var(--text-charcoal);
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-family: 'Mitr', sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    border-left: 2px solid rgb(216, 216, 216);
+    border-bottom: 2px solid rgb(216, 216, 216);
+    border-radius: 0 5px 0 5px;
+    padding: 2px 8px;
+}
+.popupCloseButton:hover{
+    background-color: rgb(236, 244, 247);
+    border: none;
+}
+
+.popup-content .modal{
+    padding: 5% 7%;
+}
+
+.popup-content form{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.popupFormTitle{
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.popup-content form label{
+    font-size: 1.5rem;
+}
+.popup-content form input, .popup-content form textarea{
+    font-size: 1.4rem;
+    padding: 5px;
+    border-radius: 5px;
+    margin: 10px 0 20px;
+    border: 2px solid rgb(229, 240, 244);
+    background-color: rgb(231, 248, 255);
+}
+
+.popup-content form input:focus-visible, textarea:focus-visible{
+    outline-color: rgb(182, 210, 222);
+}
+
+.popupSubmitContainer{
+    display: flex;
+    justify-content: center;
+    margin-top: 40px
+}
+
+
+.popupFormSubmit{
+    background-color: rgb(210, 242, 255) !important;
+    border: none !important;
+    font-weight: 600;
+    color: black;
+    width: fit-content;
+    padding: 15px 20px !important;
+}
+
+.checkboxContainer{
+    display: flex;
+    column-gap: 30px;
+    align-items: center;
+}
+
+/* Hide the browser's default checkbox */
+.checkboxContainer input {
+    display: block;
+    cursor: pointer;
+    min-height: 30px;
+    min-width: 30px;
+    border: none;
+}
+
+.chooseApplicant{
+    margin: auto;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 70%;
+    background-color: 
+    #f1f1f1;
+    border-radius: 20px;
+
+}
+.chooseApplicant h4{
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin-left: 30px;
+}
+
+.chooseApplicant button{
+    background-color: 
+    #d8f2ff;
+}

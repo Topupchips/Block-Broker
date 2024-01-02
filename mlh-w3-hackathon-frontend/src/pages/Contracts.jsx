@@ -219,12 +219,12 @@ const responsive = {
       slidesToSlide: 3 // optional, default to 1.
     },
     tablet: {
-      breakpoint: { max: 1200, min: 464 },
+      breakpoint: { max: 1200, min: 700 },
       items: 2,
       slidesToSlide: 2 // optional, default to 1.
     },
     mobile: {
-      breakpoint: { max: 464, min: 0 },
+      breakpoint: { max: 700, min: 0 },
       items: 1,
       slidesToSlide: 1 // optional, default to 1.
     }
@@ -282,24 +282,24 @@ function ContractsTop(){
                 {
                         close => (
                             <div className='modal'>
+                                <button className="popupCloseButton" onClick=
+                                    {() => close()}>
+                                        X
+                                </button>
+                                <h2 className="popupFormTitle">Create A New Job</h2>
                                 <form>
-                                    <label htmlFor="title">Job Title</label>
-                                    <input type="text" name="title"/>
+                                    <label htmlFor="jobTitle">Job Title</label>
+                                    <input type="text" name="jobTitle"/>
 
                                     <label htmlFor="budget">Budget</label>
                                     <input type="number" name="budget"/>
 
                                     <label htmlFor="description">Description</label>
                                     <textarea name="description" />
-
-                                    <input type="submit" value="Submit Application" />
+                                    <div className="popupSubmitContainer">
+                                        <input className="popupFormSubmit" type="submit" value="Submit Application" />
+                                    </div>
                                 </form>
-                                <div>
-                                    <button onClick=
-                                        {() => close()}>
-                                            Close
-                                    </button>
-                                </div>
                             </div>
                         )
                     }
