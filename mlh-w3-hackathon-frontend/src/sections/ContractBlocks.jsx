@@ -69,6 +69,7 @@ function ApplyButton(props){
             {
                     close => (
                         <div className='modal'>
+                            <h2>Apply For Contract</h2>
                             <form>
                                 <label>
                                     <textarea name="Message" />
@@ -112,6 +113,7 @@ function ViewApplicantsButton(props){
             {
                     close => (
                         <div className='modal'>
+                            <h2>Contract Applicants</h2>
                             {contractApplications}
                             <div>
                                 <button onClick=
@@ -134,6 +136,7 @@ function MarkCompleteButton(props){
             {
                     close => (
                         <div className='modal'>
+                            <h2>Complete Contract</h2>
                             <form>
                                 <label>
                                     <p>I have completed all of the requirements of the project pending approval.</p>
@@ -163,6 +166,7 @@ function ApproveCompletionButton(props){
             {
                     close => (
                         <div className='modal'>
+                            <h2>Approve Contract Completion</h2>
                             <form>
                                 <label>
                                     <p>All of the project requirements have been fullfilled and payment can be released. There are no takebackseys.</p>

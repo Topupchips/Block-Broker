@@ -90,3 +90,19 @@
 .ContractsBlockTop{
     margin: 40px 15px ;
 }
+
+.popup-overlay{
+    background: linear-gradient(6deg, rgba(220, 249, 239, 0.85) 0%, rgba(220, 229, 237, 0.85) 19%, rgba(229, 222, 231, 0.85) 39%, rgba(252, 234, 225, 0.85) 56%, rgba(255, 255, 255, 0.85)100%) !important;
+}
+
+.popup-content{
+    width: 60% !important;
+    border-radius: 20px;
+    border: none !important;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+}
+
+/* Form Styling */
+.popup-content .modal{
+    padding: 20px;
+}
