@@ -69,19 +69,18 @@ function ApplyButton(props){
             {
                     close => (
                         <div className='modal'>
-                            <h2>Apply For Contract</h2>
-                            <form>
-                                <label>
-                                    <textarea name="Message" />
-                                </label>
-                                <input type="submit" value="Submit Application" />
-                            </form>
-                            <div>
-                                <button onClick=
+                            <button className="popupCloseButton" onClick=
                                     {() => close()}>
-                                        Close
-                                </button>
-                            </div>
+                                        X
+                            </button>
+                            <h2 className="popupFormTitle">Apply For Contract</h2>
+                            <form>
+                                <label htmlFor="Message">Message to client</label>
+                                <textarea name="Message" />
+                                <div className="popupSubmitContainer">
+                                    <input className="popupFormSubmit" type="submit" value="Submit Application" />
+                                </div>
+                            </form>
                         </div>
                     )
                 }
@@ -113,14 +112,12 @@ function ViewApplicantsButton(props){
             {
                     close => (
                         <div className='modal'>
-                            <h2>Contract Applicants</h2>
-                            {contractApplications}
-                            <div>
-                                <button onClick=
+                            <button className="popupCloseButton" onClick=
                                     {() => close()}>
-                                        Close
-                                </button>
-                            </div>
+                                        X
+                            </button>
+                            <h2 className="popupFormTitle">Contract Applicants</h2>
+                            {contractApplications}
                         </div>
                     )
                 }
@@ -136,20 +133,20 @@ function MarkCompleteButton(props){
             {
                     close => (
                         <div className='modal'>
-                            <h2>Complete Contract</h2>
-                            <form>
-                                <label>
-                                    <p>I have completed all of the requirements of the project pending approval.</p>
-                                    <input type="checkbox" name="Confirmation" required/>
-                                </label>
-                                <input type="submit" value="Submit for Approval" />
-                            </form>
-                            <div>
-                                <button onClick=
+                            <button className="popupCloseButton" onClick=
                                     {() => close()}>
-                                        Close
-                                </button>
-                            </div>
+                                        X
+                            </button>
+                            <h2 className="popupFormTitle">Complete Contract</h2>
+                            <form>
+                                <label htmlFor="Confirmation" className="checkboxContainer">
+                                    <input type="checkbox" name="Confirmation" required/>
+                                    I have completed all of the requirements of the project pending approval.
+                                </label>
+                                <div className="popupSubmitContainer">
+                                    <input className="popupFormSubmit" type="submit" value="Submit for Approval" />
+                                </div>
+                            </form>
                         </div>
                     )
                 }
@@ -166,20 +163,20 @@ function ApproveCompletionButton(props){
             {
                     close => (
                         <div className='modal'>
-                            <h2>Approve Contract Completion</h2>
-                            <form>
-                                <label>
-                                    <p>All of the project requirements have been fullfilled and payment can be released. There are no takebackseys.</p>
-                                    <input type="checkbox" name="Confirmation" required/>
-                                </label>
-                                <input type="submit" value="Approve Completion" />
-                            </form>
-                            <div>
-                                <button onClick=
+                            <button className="popupCloseButton" onClick=
                                     {() => close()}>
-                                        Close
-                                </button>
-                            </div>
+                                        X
+                            </button>
+                            <h2 className="popupFormTitle">Approve Contract Completion</h2>
+                            <form>
+                                <label htmlFor="Confirmation" className="checkboxContainer">
+                                    <input type="checkbox" name="Confirmation" required/>
+                                    All of the project requirements have been fullfilled and payment can be released. There are no takebackseys.
+                                </label>
+                                <div className="popupSubmitContainer">
+                                    <input className="popupFormSubmit" type="submit" value="Approve Completion" />
+                                </div>
+                            </form>
                         </div>
                     )
                 }

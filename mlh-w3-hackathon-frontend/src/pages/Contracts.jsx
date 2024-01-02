@@ -282,6 +282,10 @@ function ContractsTop(){
                 {
                         close => (
                             <div className='modal'>
+                                <button className="popupCloseButton" onClick=
+                                    {() => close()}>
+                                        X
+                                </button>
                                 <h2 className="popupFormTitle">Create A New Job</h2>
                                 <form>
                                     <label htmlFor="jobTitle">Job Title</label>
@@ -292,15 +296,10 @@ function ContractsTop(){
 
                                     <label htmlFor="description">Description</label>
                                     <textarea name="description" />
-
-                                    <input type="submit" value="Submit Application" />
+                                    <div className="popupSubmitContainer">
+                                        <input className="popupFormSubmit" type="submit" value="Submit Application" />
+                                    </div>
                                 </form>
-                                <div>
-                                    <button onClick=
-                                        {() => close()}>
-                                            Close
-                                    </button>
-                                </div>
                             </div>
                         )
                     }
